@@ -1,0 +1,53 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.DS_Store": true,
+        "*/node_modules": true,
+        "**/.vscode": false,
+        "**/tmp": true,
+        "node_modules": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/tmp": true,
+        "**/coverage": true,
+        "**/build": true
+    },
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    // ## ESLint
+    "eslint.enable": true, //Enable eslint
+    "eslint.options": {
+        "extensions": [ //List of file extensions to activate eslint
+            ".html",
+            ".js",
+            ".vue",
+            ".jsx"
+        ]
+    },
+    "eslint.validate": [{ //list of extensions to validate
+            "language": "html",
+            "autoFix": true
+        },
+        {
+            "language": "vue",
+            "autoFix": true //Autofix any fixable errors when linting
+        },
+        {
+            "language": "javascript",
+            "autoFix": true
+        },
+        {
+            "language": "javascriptreact",
+            "autoFix": true
+        }
+    ],
+    // Run the linter on save (onSave) or on type (onType)
+    "eslint.run": "onSave",
+    "eslint.autoFixOnSave": true, //Autofix any fixable errors when linting
+    "eslint.nodePath": "C:/DEV/workspace/study-vuejs/node_modules"
+}

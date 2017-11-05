@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>02-06</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+
+<body>
+    <div id='account'>
+        예금액 : <input type="text" v-model="amount" />
+        <!-- 화면 변화가 잦지 않은 곳에선 v-if - 1회성 조건문 정도 ? -->
+        <!-- <img v-if="amount < 0" src="../images/error.png" title="마이너스는 허용하지 않습니다" style="width:15px; height:15px; vertical-align: middle" /> -->
+        <!-- 화면 변화가 잦은 곳에선 v-show - 화면의 값에 따라 컨트롤 할 때에 -->
+        <img v-show="amount < 0" src="../images/error.png" title="마이너스는 허용하지 않습니다" style="width:15px; height:15px; vertical-align: middle" />
+    </div>
+</body>
+<script type="text/javascript">
+    var model = {
+        amount: 0
+    };
+
+    var account = new Vue({
+        el: "#account",
+        data: model
+    });
+</script>
+
+</html>
